@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang=en>
+  <title>SM - 2022-04-11</title>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      overflow-y: scroll;
+      font: 16px monospace, monospace
+    }
+
+    pre {
+      overflow-x: hidden
+    }
+
+    .t {
+      text-decoration: none
+    }
+
+    @media(max-width:960px) {
+      body {
+        font-size: 1.94vw
+      }
+    }
+
+    @media(prefers-color-scheme:light) {
+      #g {
+        filter: invert(1)
+      }
+    }
+
+    @media(prefers-color-scheme:dark) {
+      body {
+        background: #2B213C;
+        color: #B2A8B6
+      }
+
+      a {
+        color: #9BBFD4
+      }
+
+    }
+
+    img, #b {
+      max-width: 80ch
+    }
+
+    span {
+      display: inline-block
+    }
+  </style>
+<div style="display:table;margin:16px auto" id=a><div id=b><pre>
+<a class=t style=color:#C8917B>Shreeram Modi</a>  <a href=/>Home</a>  <a href=/posts>Posts</a>  <a href=/pgp>PGP</a>  <a href=/resume>Resume</a>  <a href="https://linkedin.com/in/shreeram-modi"><img id=l alt=LinkedIn src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nM2TvUpEQQyFU6gIYreNz2Gjva4s+DAWgi9hYbsgLNxkNuFWvsGtdrXYQkEmxx9QESwE0dpGmdkrVoJzbRw4kBOSj/kLBfMdVkxZMSvUlDX2SczPxPDRSYpTYvOL74S/svrzbwGpl74ArP4WAnpVdb7ChvsOALwcn/jqcDhbFMVNMUCy/JHNbzsdQXIiboTa18XwxIrDNj4SxYA5rgW72hLz+COgri+XiIjSHbBhL8VN0yyMRnfL1C7RuFsECHXcFMO7KMbZB/SKAKK+Py/GdfKppmwHioP20zwkn1/p/wKkUBnw92HS2BfDpHScU081jtuf33a5EOAvZVcAAAAASUVORK5CYII="></a>  <a href="https://github.com/shrimpram"><img id=g alt=Github src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR4nIVTy24UQQwc8g28gsSRO0eQ+BFuICHEMUKCJJ8AyomwKHAi3DnBBTbhA0BCbHnWHtcuAn4hmyjhkkHu7iyzya7SkqWZbrtctstVdeqY2TUF1xT+xeAMU3BXwVVVXa4WnbZtLyh83cQPFH5kwr4JN4vtGPg3v3EtfM8EG/ydCVuD95qmuXg6Ab/zksJfZR9uz4AofF3hxyrNA5HR9bZtl+YwXIo3gz8MkKHw6bRmEz+IzOkf/sfgIxVuGPg+LL4VPjb47+QjfG3C/dQTzQ07OqEdwYnmPIOPwmf8Y3w5epJYKLhr4p9zKaPbC4OL6YC3CoudsCqPii8TgHDlXADhSmHai9gqzVn4Il/y/nkANvB7hcFmAtAoAf7ppDYF9xZmB/dinAUgdNIPgFWFHwI/rwyH4xtN3dxR8Osc6t/iLYLDN4vNn1QxijSSEAm8p7XfzQ3l8073n3U1ocItAyd1/etqEVIa5bGieazCQTL4YQfgw3RXwEfhm7LPSpnbhepWXfvN6EunhI9B28A3Rcpv5+5DCCPKSYsDTv4z4CQvE/cj85ngmfpUlwtQCMWL9eNuWnPn/ANdCngo+GyWggAAAABJRU5ErkJggg=="></a>
+________________________________________________________________________________
+
+
+<span id=2022-04-11>[<a class=t href=#2022-04-11>2022-04-11</a>]</span> The 40% Colemak Planck
+________________________________________________________________________________
+
+* Overview .............................................................. [<a class=t href=#001>001</a>]
+* The Motive ............................................................ [<a class=t href=#002>002</a>]
+* The Parts ............................................................. [<a class=t href=#003>003</a>]
+* Layout ................................................................ [<a class=t href=#004>004</a>]
+  * Layer 0 ............................................................. [<a class=t href=#005>005</a>]
+  * Layer 1 ............................................................. [<a class=t href=#006>006</a>]
+  * Layer 2 ............................................................. [<a class=t href=#007>007</a>]
+  * Layer 3 ............................................................. [<a class=t href=#008>008</a>]
+  * Layer 4 ............................................................. [<a class=t href=#009>009</a>]
+
+<span id=001>[<a class=t href=#001>001</a>]</span> Overview
+________________________________________________________________________________
+
+A few years ago, after deciding to build my own mechanical keyboard and shopping
+around for a while attempting the near impossible task of choosing one build
+from the infinite combinations of parts available, I finally chose to build an
+<a href="https://olkb.com/collections/planck">OLKB Planck</a>. This post explains the
+thoughts that went into building it as well as the parts used and layouts.
+
+
+<span id=002>[<a class=t href=#002>002</a>]</span> The Motive
+________________________________________________________________________________
+
+One of the main reasons I went the full custom route was to better allow
+customization of my keyboard's layout. I had been learning and slowly
+transitioning to using <a href="https://colemak.com/">Colemak</a> full time, and having the ability to customize my
+keyboard down to its layout would better enable me to use Colemak without
+needing to install third-party keyboard layouts. I also used it as a tool to
+speed up my learning, as forcing myself to use Colemak without the option to
+easily switch layouts back to QWERTY would build muscle memory faster and help
+me get back to my normal typing speed.
+
+The other main reason for choosing this particular style of keyboard also had to
+do with the layout. Being able to use a custom layout enabled me to fully
+utilize things such as layers to make my keyboard more ergonomic. The idea
+behind layers is that rather than moving your fingers physically across the
+keyboard to reach keys such as arrows, f-keys, media keys, etc. you hold down
+modifiers to bring those keys to you. This relieves a lot of the strain on your
+fingers when typing as they don't have to move around as much to type the same
+characters. <a href="https://youtu.be/AKGXZ1ReU54">"Tiny Keyboards: An Explanation"</a> is a great video that explains the
+logic behind this, and the tiny keyboard shown in the video is also a 40%
+ortholinear, just like the Planck.
+
+
+<span id=003>[<a class=t href=#003>003</a>]</span> The Parts
+________________________________________________________________________________
+
+(A quick disclaimer that I'm not affiliated with any of the companies listed
+below nor is this an endorsement of their products but simply a blog post about
+my personal keyboard.)
+
+With that out of the way this build was based mainly around the EOTW Planck, and
+as such uses parts from that version. However, at the time I was building it the
+PCB and plates compatible with the EOTW bottom plate were out of stock on the
+<a href="https://olkb.com">OLKB website</a> so I had to buy them from <a
+href="https://drop.com">Drop</a>. I went with an XDA keycap set since
+I really liked how low they sat on the keyboard and thought they would
+contribute to a clean, minimal look for the build especially since it wouldn't
+have a case, just a bottom plate.
+
+* <a href="https://olkb.com/products/planck-eotw-bottom-plate">EOTW Bottom Plate from OLKB</a>
+* <a href="https://drop.com/buy/planck-mechanical-keyboard">Planck kit from Drop</a>
+* <a href="https://drop.com/buy/drop-mito-xda-canvas-keycap-set">Drop + Mito XDA Canvas keycaps</a>
+* <a href="https://novelkeys.com/products/nk_-cream-series">NovelKeys Cream switches</a>
+
+As for other miscellaneous stuff I filmed and lubed the switches myself, which
+for my first time ever building a keyboard let alone modding switches turned out
+better than expected.
+
+* <a href="https://www.ashkeebs.com/product/tx-switch-films/">0.125mm TX Switch Films</a>
+* <a href="https://www.ashkeebs.com/product/205g0-switch-lubricant/">Krytox 205g0</a>
+
+
+<span id=004>[<a class=t href=#004>004</a>]</span> Layout
+________________________________________________________________________________
+
+A json file of my keymap to use with <a href="https://config.qmk.fm">QMK Configurator</a> can be found in my
+<a href="https://github.com/shrimpram/dotfiles">dotfiles repo</a> on Github (<a href="https://raw.githubusercontent.com/Shrimpram/dotfiles/master/colemak_planck.json">raw file</a>).
+
+
+--<span id=005>[<a class=t href=#005>005</a>]</span> Layer 0-----------------------------------------------------------------
+
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  &#X21B9;  |  Q  |  W  |  F  |  P  |  G  |  J  |  L  |  U  |  Y  |  ;: |  &#X232B;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  &#X232B;  |  a  |  r  |  s  |  t  |  d  |  h  |  n  |  e  |  i  |  o  |  '" |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   | &#X238B;(&#X21E7;)|  z  |  x  |  c  |  v  |  b  |  k  |  m  |  ,&lt; |  .&gt; |  &#X2191;  |/?(&#X21E7;)|
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  &#X2303;  | ALT |MO(4)|  &#X2318;  |TT(2)|    SPC    |TT(3)|  &#X2305;  |  &#X2190;  |  &#X2193;  |  &#X2192;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+  This is the default Colemak layer. The bottom row has modifier keys as
+  well as the different layer keys to change between layers. There is a
+  backspace where caps lock is normally located since the former is much
+  more useful than the latter and I have caps lock on another layer.
+  Another way QMK helps me save space is with the two shift keys.
+  Normally, when pressed and released these two keys act as the key code
+  in parentheses. The left shift is an escape key and the right shift is a
+  slash key. However, when held while pressing another key, they act as
+  shift keys and I can type uppercase letters.
+
+
+--<span id=006>[<a class=t href=#006>006</a>]</span> Layer 1-----------------------------------------------------------------
+
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |  q  |  w  |  e  |  r  |  t  |  y  |  u  |  i  |  o  |  p  |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |  a  |  s  |  d  |  f  |  g  |  h  |  j  |  k  |  l  |  ;: |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |  z  |  x  |  c  |  v  |  b  |  n  |  m  |  ,&lt; |  .&gt; |     |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |     |     |     |     |           |     |     |     |     |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+  This is a QWERTY layer I have just in case, which I access by pressing <code>MO(4)</code>
+  and then the spacebar. The only difference is in the alphas since all the
+  modifiers and other keys have the <code>KC_TRNS</code> code which makes them transparent to
+  QMK so they inherit the keycode of the next layer below them.
+
+
+--<span id=007>[<a class=t href=#007>007</a>]</span> Layer 2-----------------------------------------------------------------
+
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     | F1  | F2  | F3  | F4  |     |     |  7  |  8  |  9  |  -  |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     | F5  | F6  | F7  | F8  |  &#X21ED;  |  /  |  4  |  5  |  6  |  +  |  =  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     | F9  | F10 | F11 | F12 |     |     |  1  |  2  |  3  |  *  |  ,&lt; |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |     |     |     |     |           |     |  0  |  .  |  &#X2305;  |  &#X2305;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+  This is a function and numpad layer. I opted for a numpad instead of a number
+  row since at the time I was taking an accounting class and having a numpad
+  allowed me to work much faster than a number row. The layout is fairly
+  standard, with math operators next to the numbers as well as two enter keys
+  since I couldn't figure out what else to place there and it's much easier to
+  hit with the palm of my hand while keeping my fingers on the numpad.
+
+
+--<span id=008>[<a class=t href=#008>008</a>]</span> Layer 3-----------------------------------------------------------------
+
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  `~ |     |  (  |  \  |  )  |     |     |  &  |  *  |  -  |  ;: |  &#X2326;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |     |  [  |  _  |  ]  |     |     |  $  |  %  |  l  |  =  |  '" |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  &#X21EA;  |     |  {  |  |  |  }  |     |     |  !  |  @  |  #  |  &#X21DE;  |  ?  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |     |     |     |     |           |     | &#X2305;(&#X21E7;)|  &#X2196;  |  &#X21DF;  |  &#X2198;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+  This layer is an extension of layer 2 with symbols instead of numbers/f-keys.
+  It also has some other miscellaneous useful keys such as delete, caps lock,
+  and the grave/tilde key. These other miscellaneous keys fit well here since I
+  access this layer with <code>TT(3)</code> which is right next to the spacebar.
+
+
+--<span id=009>[<a class=t href=#009>009</a>]</span> Layer 4-----------------------------------------------------------------
+
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |  `~ |  &#9198; |  &#9199;  |  &#9197; |     |     |     |     |     |     |     |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     | VOL-| MUTE| VOL+|     |     |     |     |     |     |     |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     | BRT-| INS | BRT+|     |     |     |     |     |     |  &#X21DE;  |     |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+   |     |     |     |     |     |   TG(1)   |     |     |  &#X2196;  |  &#X21DF;  |  &#X2198;  |
+   +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+  This layer has all my media controls as well as the toggle between Colemak and
+  QWERTY.
+
+
+
+________________________________________________________________________________
+
+(c) Shreeram Modi 2023
+
+This site is hosted on <a href="https://pages.github.com/">Github Pages</a>, the source can be found here. The colors
+used are from my colorscheme <a href="https://github.com/shrimpram/stella/">Stella</a> and icons are sourced from <a href="https://icons8.com">Icons8</a>.
+Inspiration was taken from the <a href="https://kisslinux.org">KISS Linux</a> website made by Dylan Araps.
+
+</pre></div></div>
