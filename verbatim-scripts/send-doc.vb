@@ -25,9 +25,28 @@ Sub SendDoc()
     ' If previously saved, create a copy
     Dim sendDoc As Document
     Set sendDoc = Documents.Add(ActiveDocument.FullName)
+
     Selection.WholeStory
     Selection.Find.ClearFormatting
-    Selection.Find.Style = ActiveDocument.Styles("Analytics")
+    Selection.Find.Style = ActiveDocument.Styles("Analytic")
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = ""
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    Selection.WholeStory
+    Selection.Find.ClearFormatting
+    Selection.Find.Style = ActiveDocument.Styles("Undertag")
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
         .Text = ""
