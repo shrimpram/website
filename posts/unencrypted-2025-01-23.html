@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <title>SM - 2025-01-23</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      overflow-y: scroll;
+      font: 16px monospace, monospace
+    }
+
+    pre {
+      overflow-x: hidden
+    }
+
+    .t {
+      text-decoration: none
+    }
+
+    @media(max-width:960px) {
+      body {
+        font-size: 1.94vw
+      }
+    }
+
+    @media(prefers-color-scheme:dark) {
+      body {
+        background: #000;
+        color: #fff;
+      }
+
+      a {
+        color: #6cf;
+      }
+      #g {
+        filter: invert(1)
+    }
+
+    img, #b {
+      max-width: 80ch
+    }
+
+    span {
+      display: inline-block
+    }
+  </style>
+  <div style="display: table; margin: 16px auto" id="a">
+    <div id="b">
+      <pre>
+<a class=t style="color:#c30">Shreeram Modi</a>  <a href="/">Home</a>  <a href="/posts">Posts</a>  <a href="/about">About</a>  <a href="/resume/Shreeram-Modi-Resume.pdf">Resume</a>  <a href="https://linkedin.com/in/shreeram-modi"><svg
+    xmlns="http://www.w3.org/2000/svg" height="1em"
+    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+    <style>
+      svg {
+        @media(prefers-color-scheme:dark) {
+        fill: #fff
+        }
+      }
+    </style>
+    <path
+      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+  </svg></a>  <a href="https://github.com/shrimpram"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+    viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+    <style>
+      svg {
+        @media(prefers-color-scheme:dark) {
+        fill: #fff
+        }
+      }
+    </style>
+    <path
+      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+  </svg></a>
+________________________________________________________________________________
+
+
+<span id=2025-01-23>[<a class=t href=#2025-01-23>2025-01-23</a>]</span> Verbatim Scripts
+________________________________________________________________________________
+
+* Overview .............................................................. [<a class=t href=#001>001</a>]
+* Installation Instructions ............................................. [<a class=t href=#002>002</a>]
+* Scripts ............................................................... [<a class=t href=#003>003</a>]
+  * Send Doc ............................................................ [<a class=t href=#004>004</a>]
+  * Zap Doc  ............................................................ [<a class=t href=#005>005</a>]
+  * For Reference ....................................................... [<a class=t href=#006>006</a>]
+  * Highlight to Fill ................................................... [<a class=t href=#007>007</a>]
+
+
+<span id=001>[<a class=t href=#001>001</a>]</span> Overview
+________________________________________________________________________________
+
+This post is a collection of advanced Verbatim scripts to provide additional
+functions that are useful for debate. The motivation is to make available
+the best versions of various scripts that I know of in a way that doesn't
+require debaters to install a separate version of Verbatim, which can often
+cause issues with permissions and antivirus.
+
+<span id=002>[<a class=t href=#002>002</a>]</span> Installation Instructions
+________________________________________________________________________________
+
+To install scripts in Word you need to add them as a Module in the Visual Basic
+section of the existing MS Word template that you want them to be available in.
+For Verbatim scripts, this is the Debate.dotm template.
+
+Mac:
++------------------------------------------------------------------------------+
+|                                                                              |
+| Go to the menu bar > Tools > Macro > Visual Basic Editor                     |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+Windows:
++------------------------------------------------------------------------------+
+|                                                                              |
+| Go to Developer > Code > Macros                                              |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+Name the macro if necessary, and then simply paste the macro from the files
+attached to this post or the snippets of code below.
+
+You also need to add a keybinding to trigger a macro. 
+
+To do this in Mac:
++------------------------------------------------------------------------------+
+|                                                                              |
+| 1. Go to the menu bar > Tools > Customize Keyboard                           |
+| 2. Make sure you set "Save changes in" to "Debate.dotm"                      |
+| 3. In "Categories" scroll down and click "Macros" then find the macro you    |
+|    want to bind                                                              |
+| 4. Add the keyboard shortcut, then click "Save"                              |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+To do this in Windows, follow this guide[0]
+
+You should also add the following two styles to your Verbatim template:
+- Analytic[1]: for analytic arguments that you want deleted from the doc you
+               send to your opponent
+- Undertag: for brief notes that go below tags which you want deleted from the 
+            doc you send to your opponent
+
+To add styles to your template:
++------------------------------------------------------------------------------+
+|                                                                              |
+| 1. Open the styles pane                                                      |
+| 2. Click "New Style"                                                         |
+| 3. Use the following settings:                                               |
+|    - Name: either Analytic or Undertag                                       |
+|    - Style type: Paragraph                                                   |
+|    - Style based on: Tag                                                     |
+|    - Style for following paragraph: Normal                                   |
+| 5. Aestheticize the style as you wish using the following options:           |
+|    - Color, size, italics[2]                                                 |
+| 4. Check "Add to template"                                                   |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
+Couple of other things
+
+<span id=003>[<a class=t href=#003>003</a>]</span> Scripts
+________________________________________________________________________________
+
+Each of these scripts can be copied and pasted from the snippet here, or
+downloaded by clicking the hyperlink in the title and then copied from that
+file.
+
+--<span id=004>[<a class=t href=#004>004</a>]</span> <a href="/verbatim-scripts/send-doc.vb">Send Doc</a>----------------------------------------------------------------
+
+  Provides the SendDoc function, which creates a document in the same folder as
+  the current document, which has the same title as the current document just
+  with a "[S]" prepended. The send document has all Analytics and Undertags
+  omitted, leaving just cards/tags/headers. The title of the macro is "SendDoc"
+
+
+Sub SendDoc()
+    Dim originalDoc as Document
+    Set originalDoc = ActiveDocument
+
+    ' Disable screen updating for faster execution
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+
+    ' Extract the folder path from the original document's file path
+    Dim originalFolderPath As String
+    Dim originalFilePath As String
+    originalFolderPath = Left(originalDoc.FullName, InStrRev(originalDoc.FullName, Application.PathSeparator))
+    originalFilePath = originalDoc.FullName
+
+    ' Check if doc has previously been saved
+    If ActiveDocument.Path = "" Then
+        ' If not previously saved
+        MsgBox "The current document must be saved at least once."
+        Exit Sub
+    End If
+
+    ' If previously saved, create a copy
+    Dim sendDoc As Document
+    Set sendDoc = Documents.Add(ActiveDocument.FullName)
+
+    Selection.WholeStory
+    Selection.Find.ClearFormatting
+    Selection.Find.Style = ActiveDocument.Styles("Analytic")
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = ""
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    Selection.WholeStory
+    Selection.Find.ClearFormatting
+    Selection.Find.Style = ActiveDocument.Styles("Undertag")
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = ""
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+
+    Dim savePath As String
+    savePath = originalFolderPath & "[S] " & originalDoc.Name
+    ActiveDocument.SaveAs2 FileName:=savePath, FileFormat:=wdFormatDocumentDefault
+End Sub
+
+
+--<span id=005>[<a class=t href=#005>005</a>]</span> <a href="/verbatim-scrimpts/create-zap-doc.vb">Zap Doc</a>-----------------------------------------------------------------
+
+  Provides Zap, CondenseZap, and CreateZappedDoc.
+
+  Zap deletes all text from card bodies in the current document that is not 
+  highlighted, i.e. any text that is not to be read in a speech.
+
+  CondenseZap formats the Zapped document properly, removing unnecessary
+  line breaks in the card bodies due to the way Zap works.
+
+  CreateZappedDoc creates a document in the same folder as the current
+  document that is named the same, just with a "[R]" prepended. It then runs
+  Zap and CondenseZap on that document.
+
+
+Sub Zap(Optional targetDoc As Document = Nothing)
+    ' If targetDoc is not passed, use ActiveDocument
+    If targetDoc Is Nothing Then
+        Set targetDoc = ActiveDocument
+    End If
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Tag"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Cite"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Pocket"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Hat"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Block"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Analytic"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Undertag"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Selection.Find.ClearFormatting
+    Selection.Find.Highlight = False
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = ""
+        .Replacement.Text = "^p"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting    ' If targetDoc is not passed, use ActiveDocument
+        If targetDoc Is Nothing Then
+            Set targetDoc = ActiveDocument
+        End If
+        .Style = "Tag"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Cite"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Block"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Pocket"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Hat"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Analytic"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Undertag"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Selection.HomeKey Unit:=wdStory
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = " ^p"
+        .Replacement.Text = "^p"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchWholeWord = False
+        .MatchWildcards = False
+    End With
+    Selection.Find.Execute
+    While Selection.Find.Found
+        Selection.HomeKey Unit:=wdStory
+        Selection.Find.Execute Replace:=wdReplaceAll
+        Selection.Find.Execute
+    Wend
+
+    Selection.Find.Text = " ^l"
+    Selection.Find.Replacement.Text = "^l"
+    Selection.Find.Execute
+    While Selection.Find.Found
+        Selection.HomeKey Unit:=wdStory
+        Selection.Find.Execute Replace:=wdReplaceAll
+        Selection.Find.Execute
+    Wend
+
+End Sub
+
+Sub CondenseZap(Optional targetDoc As Document = Nothing)
+    ' If targetDoc is not passed, use ActiveDocument
+    If targetDoc Is Nothing Then
+        Set targetDoc = ActiveDocument
+    End If
+
+    Dim rngTemp As Range
+    Dim rngStart As Range, rngEnd As Range
+
+    Application.ScreenUpdating = False
+
+    ' Set the range to the entire document
+    Set rngTemp = targetDoc.Content
+
+    With rngTemp.Find
+        .ClearFormatting
+        .Text = Chr(13) ' Paragraph break
+        .Forward = True
+        .Wrap = wdFindStop
+        .MatchWildcards = False
+
+        Do While .Execute()
+            If Not .Found Then Exit Do
+
+                Set rngStart = rngTemp.Duplicate
+                Set rngEnd = rngTemp.Duplicate
+                rngStart.Collapse wdCollapseStart
+                rngEnd.Collapse wdCollapseEnd
+
+                ' If both ranges are highlighted, replace paragraph break with a space
+                If rngStart.HighlightColorIndex <> wdNoHighlight And rngEnd.HighlightColorIndex <> wdNoHighlight Then
+                    rngStart.End = rngEnd.Start
+                    rngStart.Text = " "
+                End If
+
+                ' Reset the range
+                rngTemp.SetRange rngEnd.End, rngTemp.Document.Range.End
+            Loop
+        End With
+
+        Application.ScreenUpdating = True
+    End Sub
+
+    Sub CreateZappedDoc()
+        Dim originalDoc As Document
+        Dim newDoc As Document
+        Dim savePath As String
+        Dim originalFolderPath As String
+        Dim originalFilePath As String
+
+        Application.ScreenUpdating = False
+        Application.DisplayAlerts = False
+
+        ' Save the original document
+        ActiveDocument.Save
+
+        ' Assign the original document to a variable
+        Set originalDoc = ActiveDocument
+
+        ' Get the folder path and file path
+        originalFolderPath = Left(originalDoc.FullName, InStrRev(originalDoc.FullName, Application.PathSeparator))
+        originalFilePath = originalDoc.FullName
+
+        ' Define save path for the modified document
+        savePath = originalFolderPath & "[R] " & originalDoc.Name
+
+        ' Save a copy of the document
+        originalDoc.SaveAs2 Filename:=savePath, FileFormat:=wdFormatXMLDocument
+        Set newDoc = Documents.Open(savePath)
+
+        ' Call Zap and CondenseZap on the new document
+        Call Zap(newDoc)
+        Call CondenseZap(newDoc)
+
+        ' Save and close the modified document
+        newDoc.Save
+        newDoc.Close
+
+        ' Reopen the original document
+        Documents.Open originalFilePath
+
+        Application.ScreenUpdating = True
+        Application.DisplayAlerts = True
+
+        MsgBox "Read version created and saved as " & savePath
+    End Sub
+
+
+--<span id=006>[<a class=t href=#006>006</a>]</span> <a href="/verbatim-scripts/for-reference.vb">For Reference</a>-----------------------------------------------------------
+
+  Provides ForReference, which operates on a selection of text. It takes all the
+  highlights in the selected text and turns them Gray. This is useful for 
+  referencing previously read cards in blocks, and for recutting your opponent's
+  evidence.
+
+
+Sub ForReference()
+    Dim rng As Range
+    Dim wordRange As Range
+
+    ' Exit if there is no selection or if the selection is empty
+    If Selection Is Nothing Or Selection.Range.Text = "" Then
+        MsgBox "Please select text to apply the highlight change.", vbExclamation
+        Exit Sub
+    End If
+
+    ' Speed up the macro by disabling screen updates and other processes
+    Application.ScreenUpdating = False
+
+    ' Set the range to the current selection
+    Set rng = Selection.Range
+
+    rng.Font.Color = RGB(85, 85, 85)
+
+    ' Loop through each word (or character range) within the selection
+    For Each wordRange In rng.Words
+        If wordRange.HighlightColorIndex <> wdNoHighlight Then
+            wordRange.HighlightColorIndex = wdGray25 ' Change to gray highlight
+        End If
+    Next wordRange
+
+    ' Restore screen updates
+    Application.ScreenUpdating = True
+
+    MsgBox "Highlight color changed to gray for the selected text.", vbInformation
+End Sub
+
+
+--<span id=007>[<a class=t href=#007>007</a>]</span> <a href="/verbatim-scripts/highlight-to-fill.vb">Highlight to Fill</a>-------------------------------------------------------
+
+  Provides ConvertHighlightsToFills, which takes all the highlights in a
+  selection of text and converts them to background fills. This is mainly
+  useful for recuts of opponents' evidence, to prevent unihighlight from
+  standardizing both your recut and their original highlight. You would first
+  use ForReference on their evidence, then convert it to a fill (to preserve
+  the gray color), and then rehighlight it.
+
+
+Sub ConvertHighlightsToFills()
+    Dim rng As Range
+    Dim wordRange As Range
+    Dim highlightColor As Long
+
+    ' Exit if there is no selection or if the selection is empty
+    If Selection Is Nothing Or Selection.Range.Text = "" Then
+        MsgBox "Please select text to apply the fill change.", vbExclamation
+        Exit Sub
+    End If
+
+    ' Speed up the macro by disabling screen updates and other processes
+    Application.ScreenUpdating = False
+
+    ' Set the range to the current selection
+    Set rng = Selection.Range
+
+    ' Loop through each word (or character range) within the selection
+    For Each wordRange In rng.Words
+        If wordRange.HighlightColorIndex <> wdNoHighlight Then
+            ' Map the HighlightColorIndex to an RGB color value
+            highlightColor = MapHighlightToRGB(wordRange.HighlightColorIndex)
+
+            ' Apply the highlight color as fill
+            wordRange.Shading.BackgroundPatternColor = highlightColor
+
+            ' Remove the highlight
+            wordRange.HighlightColorIndex = wdNoHighlight
+        End If
+    Next wordRange
+
+    ' Restore screen updates
+    Application.ScreenUpdating = True
+
+    MsgBox "Highlights converted to fills for the selected text.", vbInformation
+End Sub
+
+Function MapHighlightToRGB(highlightIndex As WdColorIndex) As Long
+    Select Case highlightIndex
+        Case wdYellow: MapHighlightToRGB = RGB(255, 255, 0)
+        Case wdBrightGreen: MapHighlightToRGB = RGB(0, 255, 0)
+        Case wdTurquoise: MapHighlightToRGB = RGB(0, 255, 255)
+        Case wdPink: MapHighlightToRGB = RGB(255, 0, 255)
+        Case wdBlue: MapHighlightToRGB = RGB(0, 0, 255)
+        Case wdRed: MapHighlightToRGB = RGB(255, 0, 0)
+        Case wdDarkBlue: MapHighlightToRGB = RGB(0, 0, 139)
+        Case wdTeal: MapHighlightToRGB = RGB(0, 128, 128)
+        Case wdGreen: MapHighlightToRGB = RGB(0, 128, 0)
+        Case wdViolet: MapHighlightToRGB = RGB(238, 130, 238)
+        Case wdDarkRed: MapHighlightToRGB = RGB(139, 0, 0)
+        Case wdDarkYellow: MapHighlightToRGB = RGB(128, 128, 0)
+        Case wdGray25: MapHighlightToRGB = RGB(210, 210, 210)
+        Case wdGray50: MapHighlightToRGB = RGB(128, 128, 128)
+        Case Else: MapHighlightToRGB = RGB(255, 255, 255) ' Default to white for unknown colors
+    End Select
+End Function
+
+
+
+[0] <a href="https://support.microsoft.com/en-us/office/customize-keyboard-shortcuts-9a92343e-a781-4d5a-92f1-0f32e3ba5b4d">Microsoft Support: Customize keyboard shortcuts</a>
+[1] Some teams have their style for Analytic arguments named as "Analytics". In
+    my opinion, this is incorrect. All of the other styles that come default in
+    Verbatim are in the singular tense, e.g. "Tag", "Cite", "Hat", etc. and not
+    in the plural tense, e.g. "Tags", "Cites", etc. Therefore, to maintain 
+    consistency with the default Verbatim styles, any added styles should also
+    be in the singular tense.
+[2] The reason you don't want to use any other stylistic options for your
+    default Analytic or Undertag styles is because those other options are
+    often used in *addition* to Analytic or Undertag styles to modify text.
+    E.g. many people underline certain words in analytics to emphasis.
+    Making your default analytic style underlined will lead to weird
+    appearances for Analytics, which is undesired.
+
+
+
+________________________________________________________________________________
+
+(c) Shreeram Modi 2024
+
+</pre>
+    </div>
+  </div>
+</html>
