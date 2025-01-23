@@ -12,9 +12,6 @@ Sub SendDoc()
     originalFolderPath = Left(originalDoc.FullName, InStrRev(originalDoc.FullName, Application.PathSeparator))
     originalFilePath = originalDoc.FullName
 
-    ' Set the save path for the modified document in the same folder as the original document
-    savePath = originalFolderPath & "[S] " & originalDoc.Name
-
     ' Check if doc has previously been saved
     If ActiveDocument.Path = "" Then
         ' If not previously saved
