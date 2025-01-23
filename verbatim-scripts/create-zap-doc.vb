@@ -106,6 +106,23 @@ Sub Zap(Optional targetDoc As Document = Nothing)
         .Execute Replace:=wdReplaceAll
     End With
 
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Undertag"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = True
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
     Selection.Find.ClearFormatting
     Selection.Find.Highlight = False
     Selection.Find.Replacement.ClearFormatting
@@ -216,6 +233,23 @@ Sub Zap(Optional targetDoc As Document = Nothing)
     With targetDoc.Content.Find
         .ClearFormatting
         .Style = "Analytic"
+        With .Replacement
+            .Text = "^&"
+            .ClearFormatting
+            .Highlight = False
+        End With
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = True
+        .MatchWildcards = True
+        .Execute Replace:=wdReplaceAll
+    End With
+
+    Application.ScreenUpdating = False
+    Options.DefaultHighlightColorIndex = wdTurquoise
+    With targetDoc.Content.Find
+        .ClearFormatting
+        .Style = "Undertag"
         With .Replacement
             .Text = "^&"
             .ClearFormatting
