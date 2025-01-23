@@ -14,14 +14,14 @@ Sub SendDoc()
 
     ' Set the save path for the modified document in the same folder as the original document
     savePath = originalFolderPath & "[S] " & originalDoc.Name
-    
+
     ' Check if doc has previously been saved
     If ActiveDocument.Path = "" Then
         ' If not previously saved
         MsgBox "The current document must be saved at least once."
         Exit Sub
     End If
-    
+
     ' If previously saved, create a copy
     Dim sendDoc As Document
     Set sendDoc = Documents.Add(ActiveDocument.FullName)
@@ -43,7 +43,7 @@ Sub SendDoc()
     End With
     Selection.Find.Execute Replace:=wdReplaceAll
 
-    
+
     Dim savePath As String
     savePath = originalFolderPath & "[S] " & originalDoc.Name
     ActiveDocument.SaveAs2 FileName:=savePath, FileFormat:=wdFormatDocumentDefault
