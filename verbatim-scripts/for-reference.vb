@@ -14,8 +14,6 @@ Sub ForReference()
     ' Set the range to the current selection
     Set rng = Selection.Range
 
-    rng.Font.Color = RGB(85, 85, 85)
-
     ' Loop through each word (or character range) within the selection
     For Each wordRange In rng.Words
         If wordRange.HighlightColorIndex <> wdNoHighlight Then
