@@ -31,8 +31,6 @@ Sub ConvertHighlightsToFills()
 
     ' Restore screen updates
     Application.ScreenUpdating = True
-
-    MsgBox "Highlights converted to fills for the selected text.", vbInformation
 End Sub
 
 Function MapHighlightToRGB(highlightIndex As WdColorIndex) As Long

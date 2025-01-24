@@ -23,7 +23,5 @@ Sub ForReference()
 
     ' Restore screen updates
     Application.ScreenUpdating = True
-
-    MsgBox "Highlight color changed to gray for the selected text.", vbInformation
 End Sub
 
