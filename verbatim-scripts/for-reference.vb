@@ -1,6 +1,6 @@
 Sub ForReference()
     Dim rng As Range
-    Dim wordRange As Range
+    Dim char As Range
 
     ' Exit if there is no selection or if the selection is empty
     If Selection Is Nothing Or Selection.Range.Text = "" Then
@@ -15,11 +15,11 @@ Sub ForReference()
     Set rng = Selection.Range
 
     ' Loop through each word (or character range) within the selection
-    For Each wordRange In rng.Words
-        If wordRange.HighlightColorIndex <> wdNoHighlight Then
-            wordRange.HighlightColorIndex = wdGray25 ' Change to gray highlight
+    For Each char In rng.Characters
+        If char.HighlightColorIndex <> wdNoHighlight Then
+            char.HighlightColorIndex = wdGray25 ' Change to gray highlight
         End If
-    Next wordRange
+    Next char
 
     ' Restore screen updates
     Application.ScreenUpdating = True
