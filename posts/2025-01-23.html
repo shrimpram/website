@@ -708,37 +708,39 @@ End Sub
 
 Sub ConvertHighlightsToFills()
     Dim rng As Range
-    Dim wordRange As Range
+    Dim char As Range
     Dim highlightColor As Long
 
-    ' Exit if there is no selection or if the selection is empty
-    If Selection Is Nothing Or Selection.Range.Text = "" Then
-        MsgBox "Please select text to apply the fill change.", vbExclamation
+    ' Check if there is a selection
+    If Selection.Type = wdSelectionIP Then
+        MsgBox "No text selected. Please select the text you want to modify.", vbExclamation
         Exit Sub
     End If
-
-    ' Speed up the macro by disabling screen updates and other processes
-    Application.ScreenUpdating = False
 
     ' Set the range to the current selection
     Set rng = Selection.Range
 
-    ' Loop through each word (or character range) within the selection
-    For Each wordRange In rng.Words
-        If wordRange.HighlightColorIndex <> wdNoHighlight Then
-            ' Map the HighlightColorIndex to an RGB color value
-            highlightColor = MapHighlightToRGB(wordRange.HighlightColorIndex)
+    ' Loop through each character in the selection
+    For Each char In rng.Characters
+        ' Check if the character is highlighted
+        If char.HighlightColorIndex <> wdNoHighlight Then
+            ' Get the RGB color based on the highlight index
+            highlightColor = MapHighlightToRGB(char.HighlightColorIndex)
 
-            ' Apply the highlight color as fill
-            wordRange.Shading.BackgroundPatternColor = highlightColor
+            ' Set the background color to the highlight color
+            char.Shading.BackgroundPatternColor = highlightColor
 
             ' Remove the highlight
-            wordRange.HighlightColorIndex = wdNoHighlight
+            char.HighlightColorIndex = wdNoHighlight
         End If
-    Next wordRange
+    Next char
 
-    ' Restore screen updates
-    Application.ScreenUpdating = True
+    ' Display a confirmation message box
+    MsgBox "Done!", vbInformation
+
+    ' Clean up
+    Set rng = Nothing
+    Set char = Nothing
 End Sub
 
 Function MapHighlightToRGB(highlightIndex As WdColorIndex) As Long
