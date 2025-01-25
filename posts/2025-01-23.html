@@ -153,7 +153,7 @@ To do this in Windows, follow this guide[0]
 You should also add the following two styles to your Verbatim template:
 - Analytic[1]: for analytic arguments that you want deleted from the doc you
                send to your opponent
-- Undertag: for brief notes that go below tags which you want deleted from the 
+- Undertag: for brief notes that go below tags which you want deleted from the
             doc you send to your opponent
 
 To add styles to your template:
@@ -183,8 +183,8 @@ downloaded by clicking the hyperlink in the title and then copied from that
 file.
 
 A disclaimer for the SendDoc and CreateZappedDoc scripts below is that they must
-only be used on documents saved to your local computer. If you attempt to run 
-them on documents saved in an online filestorage (e.g. iCloud, Dropbox, etc.) 
+only be used on documents saved to your local computer. If you attempt to run
+them on documents saved in an online filestorage (e.g. iCloud, Dropbox, etc.)
 they will fail due to a file permission error.
 
 --<span id=004>[<a class=t href=#004>004</a>]</span> <a href="/verbatim-scripts/send-doc.vb">Send Doc</a>----------------------------------------------------------------
@@ -267,7 +267,7 @@ End Sub
 
   Provides Zap, CondenseZap, and CreateZappedDoc.
 
-  Zap deletes all text from card bodies in the current document that is not 
+  Zap deletes all text from card bodies in the current document that is not
   highlighted, i.e. any text that is not to be read in a speech.
 
   CondenseZap formats the Zapped document properly, removing unnecessary
@@ -663,7 +663,7 @@ Sub CondenseZap(Optional targetDoc As Document = Nothing)
 --<span id=006>[<a class=t href=#006>006</a>]</span> <a href="/verbatim-scripts/for-reference.vb">For Reference</a>-----------------------------------------------------------
 
   Provides ForReference, which operates on a selection of text. It takes all the
-  highlights in the selected text and turns them Gray. This is useful for 
+  highlights in the selected text and turns them Gray. This is useful for
   referencing previously read cards in blocks, and for recutting your opponent's
   evidence.
 
@@ -725,7 +725,7 @@ Sub ConvertHighlightsToFills()
         ' Check if the character is highlighted
         If char.HighlightColorIndex <> wdNoHighlight Then
             ' Get the RGB color based on the highlight index
-            highlightColor = MapHighlightToRGB(char.HighlightColorIndex)
+            highlightColor = HighlightColorToRGB(char.HighlightColorIndex)
 
             ' Set the background color to the highlight color
             char.Shading.BackgroundPatternColor = highlightColor
@@ -743,23 +743,40 @@ Sub ConvertHighlightsToFills()
     Set char = Nothing
 End Sub
 
-Function MapHighlightToRGB(highlightIndex As WdColorIndex) As Long
-    Select Case highlightIndex
-        Case wdYellow: MapHighlightToRGB = RGB(255, 255, 0)
-        Case wdBrightGreen: MapHighlightToRGB = RGB(0, 255, 0)
-        Case wdTurquoise: MapHighlightToRGB = RGB(0, 255, 255)
-        Case wdPink: MapHighlightToRGB = RGB(255, 0, 255)
-        Case wdBlue: MapHighlightToRGB = RGB(0, 0, 255)
-        Case wdRed: MapHighlightToRGB = RGB(255, 0, 0)
-        Case wdDarkBlue: MapHighlightToRGB = RGB(0, 0, 139)
-        Case wdTeal: MapHighlightToRGB = RGB(0, 128, 128)
-        Case wdGreen: MapHighlightToRGB = RGB(0, 128, 0)
-        Case wdViolet: MapHighlightToRGB = RGB(238, 130, 238)
-        Case wdDarkRed: MapHighlightToRGB = RGB(139, 0, 0)
-        Case wdDarkYellow: MapHighlightToRGB = RGB(128, 128, 0)
-        Case wdGray25: MapHighlightToRGB = RGB(210, 210, 210)
-        Case wdGray50: MapHighlightToRGB = RGB(128, 128, 128)
-        Case Else: MapHighlightToRGB = RGB(255, 255, 255) ' Default to white for unknown colors
+Function HighlightColorToRGB(HighlightIndex As Integer) As Long
+    Select Case HighlightIndex
+        Case wdYellow
+            HighlightColorToRGB = RGB(255, 255, 0)
+        Case wdBrightGreen
+            HighlightColorToRGB = RGB(0, 255, 0)
+        Case wdGray25
+            HighlightColorToRGB = RGB(210, 210, 210)
+        Case wdTurquoise
+            HighlightColorToRGB = RGB(0, 255, 255)
+        Case wdPink
+            HighlightColorToRGB = RGB(255, 0, 255)
+        Case wdBlue
+            HighlightColorToRGB = RGB(0, 0, 255)
+        Case wdRed
+            HighlightColorToRGB = RGB(255, 0, 0)
+        Case wdDarkBlue
+            HighlightColorToRGB = RGB(0, 0, 128)
+        Case wdTeal
+            HighlightColorToRGB = RGB(0, 128, 128)
+        Case wdGreen
+            HighlightColorToRGB = RGB(0, 128, 0)
+        Case wdViolet
+            HighlightColorToRGB = RGB(128, 0, 128)
+        Case wdDarkRed
+            HighlightColorToRGB = RGB(128, 0, 0)
+        Case wdDarkYellow
+            HighlightColorToRGB = RGB(128, 128, 0)
+        Case wdGray50
+            HighlightColorToRGB = RGB(128, 128, 128)
+        Case wdBlack
+            HighlightColorToRGB = RGB(0, 0, 0)
+        Case Else
+            HighlightColorToRGB = RGB(255, 255, 255) ' Default to white for unknown colors
     End Select
 End Function
 
@@ -769,7 +786,7 @@ End Function
 [1] Some teams have their style for Analytic arguments named as "Analytics". In
     my opinion, this is incorrect. All of the other styles that come default in
     Verbatim are in the singular tense, e.g. "Tag", "Cite", "Hat", etc. and not
-    in the plural tense, e.g. "Tags", "Cites", etc. Therefore, to maintain 
+    in the plural tense, e.g. "Tags", "Cites", etc. Therefore, to maintain
     consistency with the default Verbatim styles, any added styles should also
     be in the singular tense.
 [2] The reason you don't want to use any other stylistic options for your
