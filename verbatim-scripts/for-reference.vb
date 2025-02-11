@@ -24,4 +24,3 @@ Sub ForReference()
     ' Restore screen updates
     Application.ScreenUpdating = True
 End Sub
-

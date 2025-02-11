@@ -1,5 +1,5 @@
 Sub SendDoc()
-    Dim originalDoc as Document
+    Dim originalDoc As Document
     Set originalDoc = ActiveDocument
 
     ' Disable screen updating for faster execution
@@ -62,5 +62,5 @@ Sub SendDoc()
 
     Dim savePath As String
     savePath = originalFolderPath & "[S] " & originalDoc.Name
-    ActiveDocument.SaveAs2 FileName:=savePath, FileFormat:=wdFormatDocumentDefault
+    ActiveDocument.SaveAs2 Filename:=savePath, FileFormat:=wdFormatDocumentDefault
 End Sub

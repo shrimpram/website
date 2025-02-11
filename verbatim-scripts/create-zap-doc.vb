@@ -335,46 +335,46 @@ Sub CondenseZap(Optional targetDoc As Document = Nothing)
         Application.ScreenUpdating = True
     End Sub
 
-    Sub CreateZappedDoc()
-        Dim originalDoc As Document
-        Dim newDoc As Document
-        Dim savePath As String
-        Dim originalFolderPath As String
-        Dim originalFilePath As String
+Sub CreateZappedDoc()
+    Dim originalDoc As Document
+    Dim newDoc As Document
+    Dim savePath As String
+    Dim originalFolderPath As String
+    Dim originalFilePath As String
 
-        Application.ScreenUpdating = False
-        Application.DisplayAlerts = False
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
 
-        ' Save the original document
-        ActiveDocument.Save
+    ' Save the original document
+    ActiveDocument.Save
 
-        ' Assign the original document to a variable
-        Set originalDoc = ActiveDocument
+    ' Assign the original document to a variable
+    Set originalDoc = ActiveDocument
 
-        ' Get the folder path and file path
-        originalFolderPath = Left(originalDoc.FullName, InStrRev(originalDoc.FullName, Application.PathSeparator))
-        originalFilePath = originalDoc.FullName
+    ' Get the folder path and file path
+    originalFolderPath = Left(originalDoc.FullName, InStrRev(originalDoc.FullName, Application.PathSeparator))
+    originalFilePath = originalDoc.FullName
 
-        ' Define save path for the modified document
-        savePath = originalFolderPath & "[R] " & originalDoc.Name
+    ' Define save path for the modified document
+    savePath = originalFolderPath & "[R] " & originalDoc.Name
 
-        ' Save a copy of the document
-        originalDoc.SaveAs2 Filename:=savePath, FileFormat:=wdFormatXMLDocument
-        Set newDoc = Documents.Open(savePath)
+    ' Save a copy of the document
+    originalDoc.SaveAs2 Filename:=savePath, FileFormat:=wdFormatXMLDocument
+    Set newDoc = Documents.Open(savePath)
 
-        ' Call Zap and CondenseZap on the new document
-        Call Zap(newDoc)
-        Call CondenseZap(newDoc)
+    ' Call Zap and CondenseZap on the new document
+    Call Zap(newDoc)
+    Call CondenseZap(newDoc)
 
-        ' Save and close the modified document
-        newDoc.Save
-        newDoc.Close
+    ' Save and close the modified document
+    newDoc.Save
+    newDoc.Close
 
-        ' Reopen the original document
-        Documents.Open originalFilePath
+    ' Reopen the original document
+    Documents.Open originalFilePath
 
-        Application.ScreenUpdating = True
-        Application.DisplayAlerts = True
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
 
-        MsgBox "Read version created and saved as " & savePath
-    End Sub
+    MsgBox "Read version created and saved as " & savePath
+End Sub
