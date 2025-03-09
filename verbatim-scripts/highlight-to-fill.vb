@@ -14,8 +14,8 @@ Sub ConvertHighlightsToFills()
 
     ' Loop through each character in the selection
     For Each char In rng.Characters
-        ' Check if the character is highlighted
-        If char.HighlightColorIndex <> wdNoHighlight Then
+        ' Check if the character is highlighted and is not a paragraph mark
+        If char.HighlightColorIndex <> wdNoHighlight And char.Text <> vbCr Then
             ' Get the RGB color based on the highlight index
             highlightColor = MapHighlightToRGB(char.HighlightColorIndex)
 
