@@ -1,4 +1,4 @@
-name: Update Resume Subdir
+name: Update Resume
 
 on:
   schedule:
