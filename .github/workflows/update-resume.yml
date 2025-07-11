@@ -19,13 +19,19 @@ jobs:
         with:
           repository: shrimpram/resume
           ref: gh-pages
-          path: resume
+          path: resume-src-tmp
           token: ${{ secrets.RESUME_PAT }}
+
+      - name: Copy resume to main repo
+        run: cp resume-src-tmp/Shreeram-Modi-Resume.pdf ./
+
+      - name: Clean up
+        run: rm -r ./resume-src-tmp
 
       - name: Commit & push changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add resume
+          git add Shreeram-Modi-Resume.pdf
           git commit -m "resume: update resume" || echo "No changes"
           git push
