@@ -27,5 +27,5 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add resume
-          git commit -m "Update resume" || echo "No changes"
+          git commit -m "resume: update resume" || echo "No changes"
           git push
