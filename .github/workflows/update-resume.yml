@@ -20,7 +20,7 @@ jobs:
           repository: shrimpram/resume
           ref: gh-pages
           path: resume
-          token: ${{ github.token }}
+          token: ${{ secrets.RESUME_PAT }}
 
       - name: Commit & push changes
         run: |
